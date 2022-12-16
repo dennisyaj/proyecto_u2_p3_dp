@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 </head>
 
@@ -14,10 +15,24 @@
     <nav></nav>
     <section>
         <h1>Mi primer proyecto en Vue</h1>
-        <div id="myApp"></div>
+        <p>{{1+1}}</p>
+        <p>{{true}}</p>
+        <p>{{!true ? 'Activo':'Inactivo'}}</p>
+        <h1>{{mensaje}}</h1>
+        <div id="myApp">
+            <p>{{1+1}}</p>
+            <p>{{true}}</p>
+            <p>{{true? 'Activo':'Inactivo'}}</p>
+            <h1>{{mensaje}}</h1>
+            <label for="">{{nombre}}</label>
+            <label for="">{{''+ apellido}}</label>
+            <button v-on:click="cambiarNombre()">cambiar nombre</button>
+            <button v-on:click="cambiarApellido">cambiar apellido</button>
+
+        </div>
+        <h1>fin</h1>
     </section>
     <footer></footer>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../js/configuracion.js"></script>
 
 </body>
